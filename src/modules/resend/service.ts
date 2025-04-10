@@ -10,16 +10,19 @@ import {
 import { CreateEmailOptions, Resend } from "resend";
 import { orderPlacedEmail } from "./emails/order-placed";
 import { resetPasswordEmail } from "./emails/reset-password";
+import { shippingUpdateEmail } from "./emails/shipping-update";
 
 enum Templates {
   ORDER_PLACED = "order-placed",
   RESET_PASSWORD = "reset-password",
+  SHIPPING_UPDATE = "shipping-update",
 }
 
 const templates: { [key in Templates]?: (props: unknown) => React.ReactNode } =
   {
     [Templates.ORDER_PLACED]: orderPlacedEmail,
-    [Templates.RESET_PASSWORD]:resetPasswordEmail,
+    [Templates.RESET_PASSWORD]: resetPasswordEmail,
+    [Templates.SHIPPING_UPDATE]: shippingUpdateEmail,
   };
 
 type ResendOptions = {
@@ -88,6 +91,8 @@ class ResendNotificationProviderService extends AbstractNotificationProviderServ
         return "Confirmación de orden";
       case Templates.RESET_PASSWORD:
         return "Restablece tu contraseña";
+      case Templates.SHIPPING_UPDATE:
+        return "Actualización de envío";
       default:
         return "New Email";
     }
