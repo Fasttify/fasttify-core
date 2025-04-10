@@ -1,5 +1,5 @@
 import type { SubscriberArgs, SubscriberConfig } from "@medusajs/framework";
-import { sendShippingUpdateWorkflow } from "../workflows/shipping-order/send-shipping-update";
+import { sendShippingUpdateWorkflow } from "../../workflows/shipping-order/send-shipping-update";
 
 export default async function shipmentCreatedHandler({
   event: { data },
