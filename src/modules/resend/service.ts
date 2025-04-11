@@ -97,7 +97,7 @@ class ResendNotificationProviderService extends AbstractNotificationProviderServ
       case Templates.SHIPPING_UPDATE:
         return "Actualización de envío";
       default:
-        return "New Email";
+        return "Nuevo pedido";
     }
   }
 
