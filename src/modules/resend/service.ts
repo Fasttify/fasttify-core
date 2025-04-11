@@ -11,11 +11,13 @@ import { CreateEmailOptions, Resend } from "resend";
 import { orderPlacedEmail } from "./emails/order-placed";
 import { resetPasswordEmail } from "./emails/reset-password";
 import { shippingUpdateEmail } from "./emails/shipping-update";
+import { orderSellerNotificationEmail } from "./emails/order-seller-notification";
 
 enum Templates {
   ORDER_PLACED = "order-placed",
   RESET_PASSWORD = "reset-password",
   SHIPPING_UPDATE = "shipping-update",
+  SELLER_NOTIFICATION = "order-seller-notification",
 }
 
 const templates: { [key in Templates]?: (props: unknown) => React.ReactNode } =
@@ -23,6 +25,7 @@ const templates: { [key in Templates]?: (props: unknown) => React.ReactNode } =
     [Templates.ORDER_PLACED]: orderPlacedEmail,
     [Templates.RESET_PASSWORD]: resetPasswordEmail,
     [Templates.SHIPPING_UPDATE]: shippingUpdateEmail,
+    [Templates.SELLER_NOTIFICATION]: orderSellerNotificationEmail,
   };
 
 type ResendOptions = {
