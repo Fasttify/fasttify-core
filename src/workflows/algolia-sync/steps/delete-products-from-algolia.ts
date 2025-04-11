@@ -1,3 +1,4 @@
+//@ts-ignore
 import { createStep, StepResponse } from "@medusajs/framework/workflows-sdk";
 import { ALGOLIA_MODULE } from "../../../modules/algolia";
 
