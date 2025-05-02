@@ -6,10 +6,8 @@ La seguridad de nuestro proyecto es una prioridad. A continuación, se detallan 
 
 | Versión | Soportada          |
 | ------- | ------------------ |
-| 1.x.x   | :white_check_mark: |
+| 0.0.1   | :white_check_mark: |
 | < 1.0   | :x:                |
-
-_Nota: Reemplaza `1.x.x` con las versiones activas de tu proyecto._
 
 ## Reportar una Vulnerabilidad
 

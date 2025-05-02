@@ -1,8 +1,8 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://www.dev.fasttify.com/icons/fasttify-white.webp">
-    <source media="(prefers-color-scheme: light)" srcset="https://www.dev.fasttify.com/icons/fasttify-white.webp">
-    <img alt="Fasttify logo" src="https://www.dev.fasttify.com/icons/fasttify-white.webp">
+   <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://www.dev.fasttify.com/icons/fasttify-white.webp">
+      <source media="(prefers-color-scheme: light)" srcset="https://www.dev.fasttify.com/icons/fasttify-white.webp">
+      <img alt="Fasttify logo" src="https://www.dev.fasttify.com/icons/fasttify-white.webp" width="100" />
     </picture>
 </p>
 
