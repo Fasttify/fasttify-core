@@ -1,63 +1,101 @@
 <p align="center">
-  <a href="https://www.medusajs.com">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/59018053/229103275-b5e482bb-4601-46e6-8142-244f531cebdb.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-    <img alt="Medusa logo" src="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
+   <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://www.dev.fasttify.com/icons/fasttify-white.webp">
+      <source media="(prefers-color-scheme: light)" srcset="https://www.dev.fasttify.com/icons/fasttify-white.webp">
+      <img alt="Fasttify logo" src="https://www.dev.fasttify.com/icons/fasttify-white.webp" width="100" />
     </picture>
-  </a>
 </p>
+
 <h1 align="center">
-  Medusa
+  Fasttify-Core
 </h1>
 
 <h4 align="center">
-  <a href="https://docs.medusajs.com">Documentation</a> |
-  <a href="https://www.medusajs.com">Website</a>
+  Sistema Multi-Tenant con Medusa
 </h4>
 
 <p align="center">
-  Building blocks for digital commerce
+  Permite crear y administrar múltiples tiendas desde una única instancia de Medusa.
 </p>
+
+> [!NOTE]
+> Este proyecto se encuentra actualmente en fase **beta** y está en desarrollo activo. Puede haber cambios significativos y funcionalidades incompletas.
+
 <p align="center">
-  <a href="https://github.com/medusajs/medusa/blob/master/CONTRIBUTING.md">
+ <a href="https://github.com/Fasttify/fasttify-core/blob/develop/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Fasttify is released under the MIT license." />
+  </a>
+  <a href="https://github.com/Fasttify/fasttify-core/blob/develop/CONTRIBUTING.md">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!" />
   </a>
-    <a href="https://www.producthunt.com/posts/medusa"><img src="https://img.shields.io/badge/Product%20Hunt-%231%20Product%20of%20the%20Day-%23DA552E" alt="Product Hunt"></a>
-  <a href="https://discord.gg/xpCwq3Kfn8">
-    <img src="https://img.shields.io/badge/chat-on%20discord-7289DA.svg" alt="Discord Chat" />
-  </a>
-  <a href="https://twitter.com/intent/follow?screen_name=medusajs">
-    <img src="https://img.shields.io/twitter/follow/medusajs.svg?label=Follow%20@medusajs" alt="Follow @medusajs" />
-  </a>
 </p>
 
-## Compatibility
+## ¿Qué es Fasttify-Core?
 
-This starter is compatible with versions >= 2 of `@medusajs/medusa`. 
+Fasttify-Core es un proyecto que busca implementar una arquitectura multi-tenant sobre una única instancia de MedusaJS. El objetivo principal es permitir que múltiples usuarios puedan crear, configurar y administrar sus propias tiendas de comercio electrónico de forma independiente, compartiendo la misma infraestructura base de Medusa pero manteniendo sus datos (productos, pedidos, clientes, etc.) completamente aislados.
 
-## Getting Started
+Esto ofrece una solución escalable y eficiente para proveedores de plataformas o agencias que deseen ofrecer servicios de e-commerce a diversos clientes sin la necesidad de desplegar y mantener una instancia de Medusa separada para cada uno.
 
-Visit the [Quickstart Guide](https://docs.medusajs.com/learn/installation) to set up a server.
+## Instalación
 
-Visit the [Docs](https://docs.medusajs.com/learn/installation#get-started) to learn more about our system requirements.
+Sigue estos pasos para configurar Fasttify-Core en tu entorno local.
 
-## What is Medusa
+### Prerrequisitos
 
-Medusa is a set of commerce modules and tools that allow you to build rich, reliable, and performant commerce applications without reinventing core commerce logic. The modules can be customized and used to build advanced ecommerce stores, marketplaces, or any product that needs foundational commerce primitives. All modules are open-source and freely available on npm.
+Asegúrate de tener instalados los siguientes requisitos previos:
 
-Learn more about [Medusa’s architecture](https://docs.medusajs.com/learn/introduction/architecture) and [commerce modules](https://docs.medusajs.com/learn/fundamentals/modules/commerce-modules) in the Docs.
+- **Git:** Para clonar el repositorio.
+- **Node.js:** Versión 20 o superior.
+- **PostgreSQL:** Base de datos para Medusa.
+- **Yarn:** Gestor de paquetes (alternativamente puedes usar npm).
 
-## Community & Contributions
+### Pasos
 
-The community and core team are available in [GitHub Discussions](https://github.com/medusajs/medusa/discussions), where you can ask for support, discuss roadmap, and share ideas.
+1.  **Clona el repositorio:**
 
-Join our [Discord server](https://discord.com/invite/medusajs) to meet other community members.
+    ```bash
+    git clone https://github.com/Fasttify/fasttify-core.git
+    ```
 
-## Other channels
+2.  **Navega al directorio del proyecto:**
 
-- [GitHub Issues](https://github.com/medusajs/medusa/issues)
-- [Twitter](https://twitter.com/medusajs)
-- [LinkedIn](https://www.linkedin.com/company/medusajs)
-- [Medusa Blog](https://medusajs.com/blog/)
-# Fasttify-Core
+    ```bash
+    cd fasttify-core
+    ```
+
+3.  **Instala las dependencias:**
+
+    ```bash
+    yarn install
+    ```
+
+4.  **Configura la base de datos:**
+    Asegúrate de que tu servidor PostgreSQL esté en ejecución y configura las credenciales en un archivo `.env` basado en `.env.template`. Luego, ejecuta:
+
+    ```bash
+    npx medusa db:setup
+    ```
+
+5.  **Siembra datos iniciales (opcional pero recomendado):**
+
+    ```bash
+    yarn seed
+    # o si usas npm:
+    # npm run seed
+    ```
+
+6.  **Crea un usuario administrador:**
+
+    ```bash
+    npx medusa user -e admin@medusajs.com -p supersecret
+    ```
+
+    _Reemplaza `admin@medusajs.com` y `supersecret` con tu correo electrónico y contraseña deseados._
+
+7.  **Inicia el servidor de desarrollo:**
+
+    ```bash
+    yarn dev
+    ```
+
+¡Ahora deberías poder acceder a tu instancia de Fasttify-Core!
