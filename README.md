@@ -7,18 +7,21 @@
     </picture>
   </a>
 </p>
+
 <h1 align="center">
-  Medusa
+  Fasttify-Core
 </h1>
 
 <h4 align="center">
-  <a href="https://docs.medusajs.com">Documentation</a> |
-  <a href="https://www.medusajs.com">Website</a>
+  Sistema Multi-Tenant con Medusa
 </h4>
 
 <p align="center">
-  Building blocks for digital commerce
+  Permite crear y administrar múltiples tiendas desde una única instancia de Medusa.
 </p>
+
+> **Nota:** Este proyecto se encuentra actualmente en fase **beta** y está en desarrollo activo. Puede haber cambios significativos y funcionalidades incompletas.
+
 <p align="center">
   <a href="https://github.com/medusajs/medusa/blob/master/CONTRIBUTING.md">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!" />
@@ -32,32 +35,8 @@
   </a>
 </p>
 
-## Compatibility
+## ¿Qué es Fasttify-Core?
 
-This starter is compatible with versions >= 2 of `@medusajs/medusa`. 
+Fasttify-Core es un proyecto que busca implementar una arquitectura multi-tenant sobre una única instancia de MedusaJS. El objetivo principal es permitir que múltiples usuarios puedan crear, configurar y administrar sus propias tiendas de comercio electrónico de forma independiente, compartiendo la misma infraestructura base de Medusa pero manteniendo sus datos (productos, pedidos, clientes, etc.) completamente aislados.
 
-## Getting Started
-
-Visit the [Quickstart Guide](https://docs.medusajs.com/learn/installation) to set up a server.
-
-Visit the [Docs](https://docs.medusajs.com/learn/installation#get-started) to learn more about our system requirements.
-
-## What is Medusa
-
-Medusa is a set of commerce modules and tools that allow you to build rich, reliable, and performant commerce applications without reinventing core commerce logic. The modules can be customized and used to build advanced ecommerce stores, marketplaces, or any product that needs foundational commerce primitives. All modules are open-source and freely available on npm.
-
-Learn more about [Medusa’s architecture](https://docs.medusajs.com/learn/introduction/architecture) and [commerce modules](https://docs.medusajs.com/learn/fundamentals/modules/commerce-modules) in the Docs.
-
-## Community & Contributions
-
-The community and core team are available in [GitHub Discussions](https://github.com/medusajs/medusa/discussions), where you can ask for support, discuss roadmap, and share ideas.
-
-Join our [Discord server](https://discord.com/invite/medusajs) to meet other community members.
-
-## Other channels
-
-- [GitHub Issues](https://github.com/medusajs/medusa/issues)
-- [Twitter](https://twitter.com/medusajs)
-- [LinkedIn](https://www.linkedin.com/company/medusajs)
-- [Medusa Blog](https://medusajs.com/blog/)
-# Fasttify-Core
+Esto ofrece una solución escalable y eficiente para proveedores de plataformas o agencias que deseen ofrecer servicios de e-commerce a diversos clientes sin la necesidad de desplegar y mantener una instancia de Medusa separada para cada uno.
