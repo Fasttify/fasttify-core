@@ -22,10 +22,10 @@
 > Este proyecto se encuentra actualmente en fase **beta** y está en desarrollo activo. Puede haber cambios significativos y funcionalidades incompletas.
 
 <p align="center">
- <a href="https://github.com/Fasttify/fasttify-core/LICENSE">
+ <a href="https://github.com/Fasttify/fasttify-core/blob/develop/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Fasttify is released under the MIT license." />
   </a>
-  <a href="https://github.com/Fasttify/fasttify-core/CONTRIBUTING.md">
+  <a href="https://github.com/Fasttify/fasttify-core/blob/develop/CONTRIBUTING.md">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" alt="PRs welcome!" />
   </a>
 </p>
