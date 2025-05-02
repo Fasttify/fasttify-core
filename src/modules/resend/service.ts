@@ -9,14 +9,23 @@ import {
 } from "@medusajs/framework/types";
 import { CreateEmailOptions, Resend } from "resend";
 import { orderPlacedEmail } from "./emails/order-placed";
+import { resetPasswordEmail } from "./emails/reset-password";
+import { shippingUpdateEmail } from "./emails/shipping-update";
+import { orderSellerNotificationEmail } from "./emails/order-seller-notification";
 
 enum Templates {
   ORDER_PLACED = "order-placed",
+  RESET_PASSWORD = "reset-password",
+  SHIPPING_UPDATE = "shipping-update",
+  SELLER_NOTIFICATION = "order-seller-notification",
 }
 
 const templates: { [key in Templates]?: (props: unknown) => React.ReactNode } =
   {
     [Templates.ORDER_PLACED]: orderPlacedEmail,
+    [Templates.RESET_PASSWORD]: resetPasswordEmail,
+    [Templates.SHIPPING_UPDATE]: shippingUpdateEmail,
+    [Templates.SELLER_NOTIFICATION]: orderSellerNotificationEmail,
   };
 
 type ResendOptions = {
@@ -83,8 +92,12 @@ class ResendNotificationProviderService extends AbstractNotificationProviderServ
     switch (template) {
       case Templates.ORDER_PLACED:
         return "Confirmación de orden";
+      case Templates.RESET_PASSWORD:
+        return "Restablece tu contraseña";
+      case Templates.SHIPPING_UPDATE:
+        return "Actualización de envío";
       default:
-        return "New Email";
+        return "Nuevo pedido";
     }
   }
 

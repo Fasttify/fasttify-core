@@ -28,7 +28,12 @@ export const sendOrderConfirmationWorkflow = createWorkflow(
       },
     });
 
-    const notification = sendNotificationStep([
+    const { data: adminUsers } = useQueryGraphStep({
+      entity: "user",
+      fields: ["id", "email"],
+    }).config({ name: "fetch-admin" });
+
+    const customerNotification = sendNotificationStep([
       {
         to: orders[0]?.email ?? "",
         channel: "email",
@@ -39,6 +44,20 @@ export const sendOrderConfirmationWorkflow = createWorkflow(
       },
     ]);
 
-    return new WorkflowResponse(notification);
+    const sellerNotification = sendNotificationStep([
+      {
+        to: adminUsers[0].email,
+        channel: "email",
+        template: "order-seller-notification",
+        data: {
+          order: orders[0],
+        },
+      },
+    ]).config({ name: "send-seller-notification" });
+
+    return new WorkflowResponse({
+      customerNotification,
+      sellerNotification,
+    });
   }
 );

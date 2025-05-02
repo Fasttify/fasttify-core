@@ -23,21 +23,22 @@
     "prepare": "husky",
     "lint": "next lint"
   },
-   "lint-staged": {
+  "lint-staged": {
     "*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
     ]
   },
   "dependencies": {
-    "@medusajs/admin-sdk": "2.6.1",
-    "@medusajs/cli": "2.6.1",
-    "@medusajs/framework": "2.6.1",
-    "@medusajs/medusa": "2.6.1",
+    "@medusajs/admin-sdk": "2.7.1",
+    "@medusajs/cli": "2.7.1",
+    "@medusajs/framework": "2.7.1",
+    "@medusajs/medusa": "2.7.1",
     "@mikro-orm/core": "6.4.3",
     "@mikro-orm/knex": "6.4.3",
     "@mikro-orm/migrations": "6.4.3",
     "@mikro-orm/postgresql": "6.4.3",
     "@react-email/components": "0.0.36",
+    "algoliasearch": "^5.23.3",
     "awilix": "^8.0.1",
     "husky": "^9.1.7",
     "pg": "^8.13.0",
@@ -45,7 +46,7 @@
     "resend": "^4.2.0"
   },
   "devDependencies": {
-    "@medusajs/test-utils": "2.6.1",
+    "@medusajs/test-utils": "2.7.1",
     "@mikro-orm/cli": "6.4.3",
     "@swc/core": "1.5.7",
     "@swc/jest": "^0.2.36",
@@ -65,5 +66,5 @@
   "engines": {
     "node": ">=20"
   },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  "packageManager": "yarn@4.1.1"
 }
