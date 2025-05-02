@@ -1,0 +1,47 @@
+# Node.js
+node_modules
+
+# Build
+dist
+out
+.build
+.next
+
+
+# Git
+.git
+
+# Configuración y dependencias
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Caché
+.cache
+.vscode
+
+# Archivos 
+next.config.js
+package.json
+postcss.config.mjs
+tailwind.config.js
+tsconfig.json
+tsconfig.node.json
+
+# Archivos de prueba
+*.test.js
+*.test.ts
+*.test.tsx
+*.test.jsx
+*.spec.js
+*.spec.ts
+*.spec.tsx
+*.spec.jsx
+
+# Archivos de configuración de TypeScript
+tsconfig.json
+tsconfig.node.json
